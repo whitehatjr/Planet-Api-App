@@ -15,10 +15,9 @@ export default class DetailsScreen extends Component {
   }
 
   componentDidMount() {
-    const { planetName } = this.state;
-    this.getDetails(planetName);
+    this.getDetails();
   }
-  getDetails = planetName => {
+  getDetails = () => {
     const { url } = this.state;
     axios
       .get(url)
